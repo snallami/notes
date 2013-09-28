@@ -1,0 +1,24 @@
+Quick notes about derby
+1) Derby binaries can be downloaded from http://db.apache.org
+
+2) set DERBY_HOME abd add DERBY_HOME/bin to PATH
+
+3) start derby network server using command %DERBY_HOME%/bin/startNetworkServer.cmd
+    (starts server on port 1527 by default)
+
+4) use sysinfo command , to see info about java and derby environment.
+
+5) Some of the simplest tools to interact with db i s- ij and dblook
+
+6) ij 
+	a) ij> connect 'jdbc:derby://localhost:1527/HRMDB;create=true';
+	b) ij> create table Employee(EmployeeId int primary key, firstName varchar(20),
+		lastName varchar(20));
+	c) ij> describe Employee;
+	d) ij> insert into Employee values (1,'Suresh', 'Nallamilli')
+	e) ij> select count(*) from Employee;
+	f) ij > exit;
+
+7) dblook -d 'jdbc:derby://localhost:1527/HRMDB';
+	
+	
